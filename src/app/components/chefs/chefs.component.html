@@ -1,0 +1,25 @@
+
+
+<section class="chefs_part blog_item_section section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5" style="margin-top: 20%;">
+                <div class="section_tittle">
+                    <p>Team Member</p>
+                    <h2>Our Experience Chefs</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row" >
+            
+            <div class="col-lg-4"  *ngFor='let c of chefs'  >
+                <app-chef [chefInput]='c'></app-chef>
+
+               
+               
+            </div>
+            
+            
+        </div>
+    </div>
+</section>

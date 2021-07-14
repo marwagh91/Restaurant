@@ -1,0 +1,42 @@
+
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Tel</th>
+        <th scope="col">Role</th>
+        <th scope="col">Image</th>
+
+
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of chefs"> 
+        <td>{{c._id}}</td>
+        <td>{{c.firstName}}</td>
+        <td>{{c.lastName }}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.tel}}</td>
+        <td>{{c.role}}</td>
+        <td><img [src]="c.avatar"></td>
+
+
+
+        <td>
+          <button type="button" class="btn btn-danger"(click)='deleteChef(c._id)'>Delete</button>
+
+
+        </td>
+
+
+      </tr>
+     
+     
+    </tbody>
+  </table>

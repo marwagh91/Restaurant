@@ -1,0 +1,39 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Tel</th>
+        <th scope="col">Role</th>
+        <th scope="col">Image</th>
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users"> 
+        <td>{{u._id}}</td>
+        <td>{{u.firstName}}</td>
+        <td>{{u.lastName }}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.tel}}</td>
+        <td>{{u.role}}</td>
+        <td><img [src]="u.avatar"></td>
+
+
+
+
+        <td>
+          <button type="button" class="btn btn-danger"(click)='deleteUser(u._id)'>Delete</button>
+
+
+        </td>
+
+
+      </tr>
+     
+     
+    </tbody>
+  </table> 

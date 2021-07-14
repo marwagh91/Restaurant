@@ -1,0 +1,47 @@
+<form>
+    <div class="text-center">
+    <label for="">Filter</label>
+    <input type="text" [(ngModel)]='term' [ngModelOptions]="{standalone: true}">
+    </div>
+   </form>
+<table class="table-dark table-bordered">
+    <thead>
+      <tr>
+
+        <th scope="col">id</th>
+        <th scope="col">Id Chef</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Image</th>
+
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of plats| filtre:term"> 
+        <td>{{p._id}}</td>
+        <td>{{p.idChef}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.description }}</td>
+        <td>{{p.price}}</td>
+        <td><img [src]="p.img"></td>
+
+
+
+
+        <td>
+          <!-- <button type="button" class="btn btn-primary" (click)='displayPlat(p._id)'>Display</button> -->
+          <button type="button" class="btn btn-info" (click)='editPlat(p._id)'>Edit</button>
+          <button type="button" class="btn btn-danger"(click)='deletePlat(p._id)'>Delete</button>
+
+
+        </td>
+
+
+      </tr>
+     
+     
+    </tbody>
+  </table> 

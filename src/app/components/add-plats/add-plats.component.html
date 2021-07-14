@@ -1,0 +1,59 @@
+
+  
+  <section class="contact-section section_padding">
+    <div class="container">
+      
+
+
+      <div class="row">
+      
+        <div class="col-lg-8">
+          <form class="form-contact contact_form" #addPlatForm="ngForm" (ngSubmit)="submitPlat()" >
+            <div class="row">
+             
+              <div class="col-md-12">
+                <div class="form-group">Name Plat
+                  <input class="form-control" type="text" placeholder="Name Plat" [(ngModel)]="plat.name" [ngModelOptions]="{standalone:true}" >
+                </div>
+              </div>
+              
+              <div class="col-md-12">
+                <div class="form-group">Description
+                  <textarea class="form-control"  type="text" placeholder="Description" [(ngModel)]="plat.description" [ngModelOptions]="{standalone:true}" ></textarea>
+                </div>
+              </div>
+             
+              <div class="col-md-12">
+                <div class="form-group">price
+                  <input class="form-control" type="text" placeholder="price" [(ngModel)]="plat.price" [ngModelOptions]="{standalone:true}">
+                </div>
+              </div>
+              <!-- <div class="col-md-12">
+                <div class="form-group">Id Chef
+                  <input class="form-control" type="text" placeholder="Name Chef" [(ngModel)]="chef.price" [ngModelOptions]="{standalone:true}">
+                </div>
+              </div> -->
+             
+            </div>
+           
+            <button type="button" (click)='filePicker.click()' class="btn btn-success">Add
+              Image</button>
+          <div class="form-group">
+              <input style="visibility: hidden;" type="file" class="form-control" #filePicker
+                  (change)='onImageSelected($event)' />
+          </div>
+          <img [src]="imagePreview" *ngIf="imagePreview" class="rounded-circle"
+              style="width: 100px; height: 100px;">
+            <div class="form-group">
+             <a></a> <button type="submit" class="button button-contactForm btn_4" style="margin-left: 30%;padding-left: 20px;padding-right: 20px; font-size: 20px;" >{{title}} Plats</button>
+            </div>
+          </form>
+        </div>
+     
+      </div>
+    </div>
+  </section>
+
+
+
+
